@@ -1,0 +1,22 @@
+// variables and mixins
+@import "sass/partials/abstracts/variables";
+@import "sass/partials/abstracts/mixins";
+
+// setup base styles
+@import "sass/partials/base/base";
+@import "sass/partials/base/typography";
+
+// layout for sections
+@import "sass/partials/layout/header";
+@import "sass/partials/layout/footer";
+@import "sass/partials/layout/main";
+@import "sass/partials/layout/navigation";
+@import "sass/partials/layout/grid";
+
+// components
+@import "sass/partials/components/buttons";
+@import "sass/partials/components/form";
+@import "sass/partials/components/cards";
+
+// page specific layout
+@import "sass/partials/pages/product";

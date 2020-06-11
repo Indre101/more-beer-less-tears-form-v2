@@ -1,0 +1,45 @@
+// --------------------------------------------
+// This file contains font and typography rules
+// --------------------------------------------
+@import "sass/partials/abstracts/mixins";
+
+// font import
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+
+// text styles
+body {
+  font-family: var(--primary-font);
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+p {
+  font-family: var(--primary-font);
+  line-height: var(--line-height);
+  color: var(--text-body-color);
+}
+
+h1 {
+  font-family: var(--primary-font);
+  color: var(--text-h1-color);
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-family: var(--primary-font);
+  color: var(--text-h2-color);
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: var(--primary-font);
+  color: var(--text-h3-color);
+}
+
+blockquote > p {
+  @include blockquote();
+  font-size: 1.2rem;
+  text-align: center;
+}

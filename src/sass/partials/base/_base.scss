@@ -1,0 +1,38 @@
+// ----------------------------------------
+// This file contains reset styles
+// ----------------------------------------
+
+// reset styles
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+// base image styles
+img {
+  width: 100%;
+  height: auto;
+}
+
+// base link styles
+a {
+  text-decoration: none;
+  transition: all var(--transition);
+  &:link {
+    color: var(--link-color);
+  }
+  &:visited {
+    color: var(--link-color-visited);
+  }
+  &:hover {
+    color: var(--link-color-hover);
+  }
+  &:active {
+    color: var(--link-color-active);
+  }
+  &:focus {
+    color: var(--link-color-focus);
+  }
+}

@@ -1,0 +1,160 @@
+// --------------------------------------------
+// This file contains main grid styles
+// --------------------------------------------
+
+@import "sass/partials/abstracts/mixins";
+
+.App {
+	margin: 0 auto;
+	overflow-x: hidden;
+	width: 100%;
+}
+
+.main-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	// grid-template-columns: 20px 1fr 20px;
+	position: relative;
+	// overflow: hidden;
+}
+
+.confirmation {
+	place-content: center;
+	text-align: center;
+}
+
+.order-summary {
+	display: flex;
+	flex-direction: column;
+	border-radius: var(--border-radius);
+	margin: 1rem;
+}
+
+.order-summary-personal,
+.ordersumary,
+.order-summary-total {
+	border: var(--border);
+	border-radius: 1rem;
+	padding: 1rem;
+	margin: 0.5rem;
+	opacity: 1;
+	transform: translate(0);
+	h2 {
+		color: var(--color-5-normal);
+	}
+	h3 {
+		text-transform: uppercase;
+		color: var(--color-2-normal);
+	}
+}
+
+.order-message-wrapper {
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+	text-align: center;
+	.order-number {
+		color: var(--color-5-normal);
+	}
+}
+
+.beer-list-container {
+	display: grid;
+	position: relative;
+}
+
+.beer-list {
+	scroll-behavior: smooth;
+	overflow-x: scroll;
+	scroll-snap-type: x proximity;
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: 2rem;
+	grid-auto-flow: column;
+	grid-auto-columns: 60vw;
+	padding-bottom: 2rem;
+}
+
+.beer-list > * {
+	scroll-snap-align: center;
+}
+
+.beer-list:before,
+.beer-list:after {
+	content: "";
+	width: 1rem;
+}
+
+.page-title {
+	grid-column: 1/-1;
+}
+
+.product-page-layout {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-template-columns: 1fr;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+.product-main-description {
+	grid-column: 1 / -1;
+	display: grid;
+	// grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-template-columns: 1fr;
+	margin-top: 2rem;
+	h2 {
+		color: var(--color-2-normal);
+		text-transform: uppercase;
+	}
+	p {
+		margin-bottom: 2rem;
+	}
+}
+
+.promo-section {
+	height: 400px;
+}
+
+.stats-section {
+	display: grid;
+	// background-color: var(--color-6-normal);
+}
+
+.top-beer {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	position: relative;
+	overflow: hidden;
+	.top-beer-info {
+		@include flexCenter(center, column);
+		padding: 3rem;
+	}
+	.top-beer-image {
+		z-index: 1;
+	}
+	.banner {
+		position: absolute;
+		width: 100vw;
+		justify-self: center;
+		z-index: 0;
+	}
+}
+
+// media query for desktop
+@media (min-width: 800px) {
+	.product-page-layout {
+		grid-template-columns: 1fr 1fr;
+	}
+	.product-main-description {
+		grid-template-columns: 1fr 1fr;
+		h2,
+		p {
+			grid-column: 2;
+		}
+	}
+	.beer-list {
+		grid-auto-columns: 20vw;
+	}
+}

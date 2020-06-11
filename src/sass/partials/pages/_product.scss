@@ -1,0 +1,15 @@
+// --------------------------------------------
+// This file contains product page styles
+// --------------------------------------------
+@import "sass/partials/abstracts/mixins";
+
+.product-info {
+	text-align: center;
+	h2 {
+		color: var(--color-2-normal);
+	}
+}
+
+.product-image {
+	@include dropShadow(var(--color-2-normal));
+}

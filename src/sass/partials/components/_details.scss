@@ -1,0 +1,21 @@
+// --------------------------------------------
+// This file contains form styles
+// --------------------------------------------
+@import "sass/partials/abstracts/mixins";
+@import "sass/partials/abstracts/variables";
+
+form {
+  width: 500px;
+  padding: 2rem;
+}
+h2 {
+  justify-content: flex-start;
+}
+input {
+  display: block;
+  outline: none;
+  padding: 1rem;
+  width: 100%;
+  border: var(--border);
+  border-radius: var(--border-radius);
+}

@@ -1,0 +1,57 @@
+// --------------------------------------------
+// This file contains card styles
+// --------------------------------------------
+
+@import "sass/partials/abstracts/mixins";
+
+.single-beer {
+	display: grid;
+	// grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: repeat(auto-fit, minmax(2fr, 1fr));
+	position: relative;
+	.single-beer-image-container {
+		background-color: var(--color-2-normal);
+		padding: var(--padding);
+		border-radius: var(--border-radius);
+		grid-column: 1 / -1;
+		grid-row: 1 / 4;
+	}
+	.single-beer-image {
+		@include dropShadow(var(--color-1-dark));
+	}
+	.single-beer-info {
+		background-color: white;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		grid-column: 1 / -1;
+		grid-row: 4 / 8;
+		border-radius: var(--border-radius);
+		z-index: 1;
+	}
+	.single-beer-category {
+		color: var(--color-2-normal);
+	}
+	.single-beer-cloud {
+		position: absolute;
+		bottom: 220px;
+		transform: scale(1.5);
+		z-index: 0;
+	}
+	.single-beer-bubble {
+		position: absolute;
+		left: 20px;
+		top: -50px;
+		z-index: 0;
+	}
+}
+
+.single-beer-counter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: var(--border);
+	border-radius: var(--border-radius);
+	padding: 0.5rem;
+	margin: 1rem 0;
+}

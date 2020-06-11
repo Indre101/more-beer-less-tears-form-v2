@@ -1,0 +1,76 @@
+// ----------------------------------------
+// This file contains all custom properties
+// ----------------------------------------
+
+:root {
+	// typography settings
+	--base-font-size: 16px;
+	--primary-font: "Karla", sans-serif;
+	--secondary-font: "Arial", sans-serif;
+	--line-height: 1.5;
+	--letter-spacing: 0.5rem;
+
+	// spacing
+	--gap: 1.5em;
+	--gutter: 1rem;
+	--margin: 1rem;
+	--padding: 2em;
+	--padding-button: 0.8rem 1rem;
+	--margin-button: 0.2rem;
+
+	// borders
+	--border: 2px solid var(--color-3-normal);
+	--border-radius: 0.5rem;
+
+	// buttons
+	--btn-outline: var(--color-3-normal);
+
+	// animation
+	--transition: 0.3s ease-in-out;
+
+	// shadows
+	--box-shadow: 15px 15px 0px 0px;
+
+	// element colors
+	--text-body-color: var(--color-1-normal);
+	--text-h1-color: var(--color-1-normal);
+	--text-h2-color: var(--color-1-normal);
+
+	// link colors
+	--link-color: var(--color-3-normal);
+	--link-bg-color: var(--color-2-normal);
+	--link-color-visited: var(--color-3-normal);
+	--link-color-focus: var(--color-3-normal);
+	--link-color-hover: var(--color-3-normal);
+	--link-color-active: var(--color-2-normal);
+
+	//filters
+	--filter-main: grayscale(50%);
+
+	// HSL base color settings
+	// Dark blue #34344D
+	--base-color-1: 240;
+	--color-1-normal: hsla(var(--base-color-1) 19% 25% / 100%);
+	--color-1-dark: hsla(var(--base-color-1) 19% 10% / 100%);
+
+	// Purple #504ECC
+	--base-color-2: 241;
+	--color-2-normal: hsla(var(--base-color-2) 55% 55% / 100%);
+
+	// Gray #5C665A
+	--base-color-3: 110;
+	--color-3-normal: hsla(var(--base-color-3) 6% 38% / 100%);
+	--color-3-grey: #5c665a;
+
+	// Green #68CC4E
+	--base-color-4: 108;
+	--color-4-normal: hsla(var(--base-color-4) 55% 55% / 100%);
+
+	// Red #FF6961
+	--base-color-5: 3;
+	--color-5-normal: hsla(var(--base-color-5) 100% 69% / 100%);
+
+	// Yellow #FAFFC7
+	--base-color-6: 65;
+	--color-6-normal: hsla(var(--base-color-6) 100% 89% / 100%);
+}

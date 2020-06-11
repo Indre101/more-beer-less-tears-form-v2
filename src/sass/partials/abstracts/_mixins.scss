@@ -1,0 +1,25 @@
+// --------------------------------------
+// This file contains all mixins
+// --------------------------------------
+
+@mixin flexCenter($aligned, $direction) {
+	display: flex;
+	justify-content: center;
+	align-items: $aligned;
+	flex-direction: $direction;
+}
+
+@mixin dropShadow($color) {
+	filter: drop-shadow(20px 20px 0px $color);
+}
+
+@mixin blockquote() {
+	position: relative;
+	font-style: italic;
+	&:before {
+		content: open-quote;
+	}
+	&:after {
+		content: close-quote;
+	}
+}

@@ -1,0 +1,164 @@
+// --------------------------------------------
+// This file contains card styles
+// --------------------------------------------
+@import "sass/partials/abstracts/mixins";
+@import "sass/partials/abstracts/variables";
+.carPayment {
+	width: 100%;
+	justify-content: center;
+}
+
+.page-title {
+	text-align: center;
+}
+
+.payment-buttons {
+	justify-content: center;
+}
+
+.optionsForPayment {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 0 1rem;
+	gap: 0 1rem;
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+}
+label.mobpay {
+	grid-area: 1/1;
+	img {
+		width: 100%;
+	}
+}
+[type="radio"]:checked + label {
+	filter: grayscale(0);
+}
+[type="radio"] {
+	visibility: hidden;
+}
+[type="radio"] + label {
+	width: 100%;
+	object-fit: contain;
+	border-radius: var(--border-radius);
+	border: var(--border);
+	border-color: var(--color-2-normal);
+	transition: filter 0.3s linear;
+	@include flexCenter(center, row);
+	filter: grayscale(1);
+	height: 80px;
+}
+label.card {
+	grid-area: 1/2;
+	img {
+		width: 40%;
+	}
+}
+// MObile pay
+.mobilePay {
+	@include flexCenter(center, column);
+	background: #fff;
+	// box-shadow:
+	// /* The top layer shadow */ 0 1px 1px rgba(0, 0, 0, 0.15),
+	// 	/* The second layer */ 0 10px 0 -5px #eee,
+	// 	/* The second layer shadow */ 0 10px 1px -4px rgba(0, 0, 0, 0.15),
+	// 	/* The third layer */ 0 20px 0 -10px #eee,
+	// 	/* The third layer shadow */ 0 20px 1px -9px rgba(0, 0, 0, 0.15);
+	// /* Padding for demo purposes */
+	padding: 30px;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	margin: 1.5rem;
+	opacity: 0;
+	transform: translateY(50px);
+	animation: showPayment 0.5s linear forwards 1;
+	h2 {
+		text-align: center;
+		width: 85vw;
+		border-bottom: var(--border);
+		margin-bottom: 2rem;
+		padding: 1rem;
+	}
+	img {
+		height: 100px;
+		background: #4f4dcb;
+		width: 100px;
+		border-radius: var(--border-radius);
+		margin-bottom: 2rem;
+	}
+	h4 {
+		margin-bottom: 1rem;
+	}
+}
+@keyframes showPayment {
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+#PaymentForm {
+	display: flex;
+	animation: showPayment 0.5s linear forwards 1;
+	opacity: 0;
+	transform: translateY(50px);
+	flex-direction: column;
+}
+.cardForm {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	input {
+		width: 90%;
+		min-width: 250px;
+		color: var(--color-3-normal);
+		margin: 0.5rem 0;
+		border-color: var(--btn-outline);
+		border-radius: var(--border-radius);
+		text-transform: capitalize;
+		&[data-borderchange="showError"] {
+			border-color: var(--color-5-normal) !important;
+			color: var(--color-3-normal) !important;
+		}
+		&[data-borderchange="hideError"] {
+			border-color: var(--btn-outline) !important;
+			color: var(--color-3-normal) !important;
+		}
+	}
+	input:focus {
+		border-color: var(--color-2-normal) !important;
+	}
+	input:focus + .error {
+		// display: none;
+		visibility: hidden;
+	}
+	.error {
+		height: 30px;
+		// display: none;
+		visibility: hidden;
+		background-color: var(--color-5-normal);
+		width: 90%;
+		color: white;
+		padding: 0.5rem;
+		border-radius: 0 0 15px 15px;
+		&[data-borderchange="showError"] {
+			visibility: visible;
+		}
+		&[data-borderchange="hideError"] {
+			visibility: hidden !important;
+		}
+	}
+}
+@keyframes showerror {
+	100% {
+		opacity: 0;
+	}
+}
+[data-show="show"] {
+	display: block;
+}
+[data-show="hide"] {
+	display: none;
+}

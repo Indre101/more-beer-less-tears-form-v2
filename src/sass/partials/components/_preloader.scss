@@ -1,0 +1,17 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  z-index: 120;
+  background-color: #4f4dcb;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: dissapear 1s 5.3s linear forwards 1;
+}
+@keyframes dissapear {
+  100% {
+    opacity: 0;
+  }
+}
