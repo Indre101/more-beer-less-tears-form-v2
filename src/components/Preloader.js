@@ -12,10 +12,25 @@ export default React.memo(function Preloader(props) {
       loop: true,
       autoplay: false,
       animationData: animationData,
+      rendererSettings: {
+        id: "lottie-anim-element",
+      },
     });
     animation.play();
   }, []);
 
   const container = useRef();
-  return <div id="preloader" className="preloader" ref={container}></div>;
+  const preloaderContainer = useRef();
+  return (
+    <div className="preloaderContainer" ref={preloaderContainer}>
+      <div
+        id="preloader"
+        className="preloader"
+        ref={container}
+        onAnimationEnd={() => {
+          preloaderContainer.current.style.display = "none";
+          props.setpreloaderPlayed(true);
+        }}></div>
+    </div>
+  );
 });

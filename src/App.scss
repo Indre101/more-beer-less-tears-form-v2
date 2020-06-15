@@ -26,155 +26,155 @@
 .animBeer,
 .animCloud,
 .animList {
-	opacity: 0;
+  opacity: 0;
 }
 
 .animList {
-	transform: translateX(10vw);
+  transform: translateX(10vw);
 }
 
 .beer-list-container {
-	h1 {
-		transform: translateX(10vw);
-		opacity: 0;
-	}
+  h1 {
+    transform: translateX(10vw);
+    opacity: 0;
+  }
 }
 
 [data-show="show"] {
-	display: block;
+  display: block;
 }
 
 [data-show="hide"] {
-	display: none;
+  display: none;
 }
 
 .orders {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .single-beer.cartBeerSinlge {
-	opacity: 0;
-	transform: translateY(20px);
-	display: grid;
-	width: 360px;
-	grid-template-columns: repeat(3, 1fr);
-	border: var(--border);
-	border-radius: var(--border-radius);
-	padding: 0.5rem;
-	align-items: center;
-	margin: 1rem 0;
+  opacity: 0;
+  transform: translateY(20px);
+  display: grid;
+  width: 360px;
+  grid-template-columns: repeat(3, 1fr);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: 0.5rem;
+  align-items: center;
+  margin: 1rem 0;
 
-	div.single-beer-image-container {
-		padding: 0;
-		gap: 0;
-		grid-area: 1;
-		background: none;
-	}
-	.cartBeerImg {
-		width: 100px;
-	}
+  div.single-beer-image-container {
+    padding: 0;
+    gap: 0;
+    grid-area: 1;
+    background: none;
+  }
+  .cartBeerImg {
+    width: 100px;
+  }
 
-	.single-beer-counter {
-		display: flex;
-		flex-direction: row;
-		border: none;
-	}
+  .single-beer-counter {
+    display: flex;
+    flex-direction: row;
+    border: none;
+  }
 
-	.actions {
-		height: 150px;
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		justify-content: space-between;
-	}
+  .actions {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-	h2 {
-		color: var(--color-5-normal);
-	}
-	h3 {
-		color: var(--color-3-grey);
+  h2 {
+    color: var(--color-5-normal);
+  }
+  h3 {
+    color: var(--color-3-grey);
 
-		font-family: var(--primary-font);
-		margin-bottom: var(--margin);
-	}
+    font-family: var(--primary-font);
+    margin-bottom: var(--margin);
+  }
 }
 
 .totalToPAy {
-	margin-top: 2rem;
-	width: 100%;
-	display: flex;
-	justify-content: space-around;
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 
-	h2 {
-		color: var(--text-h2-color);
-	}
+  h2 {
+    color: var(--text-h2-color);
+  }
 }
 
 .cart {
-	a {
-		display: flex;
-		width: 50%;
-		margin-top: 2rem;
-		justify-self: center;
-		margin-bottom: 2rem;
-	}
+  a {
+    display: flex;
+    width: 50%;
+    margin-top: 2rem;
+    justify-self: center;
+    margin-bottom: 2rem;
+  }
 }
 
 .cart-li {
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	div {
-		font-size: 0.8rem;
-		position: absolute;
-		letter-spacing: normal;
-		display: flex;
-		height: 30px;
-		width: 30px;
-		justify-content: center;
-		border-radius: 50%;
-		top: 30px;
-		right: 10px;
-		color: white;
-		background-color: var(--color-5-normal);
-	}
-	h4 {
-		@include flexCenter(center, row);
-	}
-	.cart-item-anim {
-		animation: squishAnim 1s ease 1 normal forwards;
-	}
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  div {
+    font-size: 0.8rem;
+    position: absolute;
+    letter-spacing: normal;
+    display: flex;
+    height: 30px;
+    width: 30px;
+    justify-content: center;
+    border-radius: 50%;
+    top: 30px;
+    right: 10px;
+    color: white;
+    background-color: var(--color-5-normal);
+  }
+  h4 {
+    @include flexCenter(center, row);
+  }
+  .cart-item-anim {
+    animation: squishAnim 1s ease 1 normal forwards;
+  }
 }
 
 @keyframes squishAnim {
-	0% {
-		transform: scale3d(1, 1, 1);
-		opacity: 0;
-	}
-	30% {
-		transform: scale3d(1.25, 0.75, 1);
-		opacity: 1;
-	}
-	40% {
-		transform: scale3d(0.75, 1.25, 1);
-	}
-	50% {
-		transform: scale3d(1.15, 0.85, 1);
-	}
-	65% {
-		transform: scale3d(0.95, 1.05, 1);
-	}
-	75% {
-		transform: scale3d(1.05, 0.95, 1);
-	}
-	100% {
-		transform: scale3d(1, 1, 1);
-	}
+  0% {
+    transform: scale3d(1, 1, 1);
+    opacity: 0;
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+    opacity: 1;
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
 }
 
 .cart-img {
-	width: 60px;
-	height: 60px;
+  width: 60px;
+  height: 60px;
 }
