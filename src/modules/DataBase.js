@@ -19,8 +19,6 @@ const GetData = async () => {
 
 // post order
 const PostOrder = async (newOrder, setordderNumber) => {
-  console.log(newOrder);
-
   const data = await fetch(
     `https://more-beers-less-tears-data.herokuapp.com/order`,
     {
@@ -34,7 +32,6 @@ const PostOrder = async (newOrder, setordderNumber) => {
   );
 
   const response = await data.json();
-  console.log(response);
 
   return response;
 };
