@@ -25,6 +25,10 @@ export default function CardPayment(props) {
 
   const cardFom = useRef();
 
+  useEffect(() => {
+    cardFom.current.noValidate = true;
+  }, [cardFom]);
+
   function handleInputFocus(event) {
     const { name } = event.target;
     setcardDetail((prevInputData) => ({
@@ -60,11 +64,11 @@ export default function CardPayment(props) {
   }
 
   useEffect(() => {
-    const sth = Object.values(isFormValid).every(
+    const formValidationStatus = Object.values(isFormValid).every(
       (validationField) => validationField
     );
 
-    if (sth) {
+    if (formValidationStatus) {
       props.history.push({
         pathname: `/confirmation`,
         state: {
@@ -121,7 +125,6 @@ export default function CardPayment(props) {
   function showInputErrors(cardInput) {
     cardInput.nextSibling.dataset.borderchange = "showError";
     cardInput.dataset.borderchange = "showError";
-
     gsap.fromTo(cardInput.nextSibling, { y: -23 }, { y: -18, duration: 1 });
   }
 
@@ -131,10 +134,6 @@ export default function CardPayment(props) {
 
     // cardInput.style.borderColor = "black";
   }
-
-  useEffect(() => {
-    cardFom.current.noValidate = true;
-  }, [cardFom]);
 
   return (
     <div id="PaymentForm">
