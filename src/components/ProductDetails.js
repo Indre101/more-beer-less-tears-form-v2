@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Button } from "./Buttons";
 import gsap from "gsap";
+import { Link } from "react-router-dom";
 
 const ProductDetails = (props) => {
   const { beer, setbeerCount, beerCount, createOrder } = props;
@@ -45,6 +46,14 @@ const ProductDetails = (props) => {
             </Button>
           </div>
           <Button onClick={createOrder}>Add to cart</Button>
+          <Link
+            to={{
+              pathname: `/`,
+            }}>
+            <Button type="button" buttonStyle="btn--secondary--solid">
+              Back to shop
+            </Button>
+          </Link>
         </section>
         <section className="product-main-description animUp">
           <h2>Appearance</h2>

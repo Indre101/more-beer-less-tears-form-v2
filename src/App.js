@@ -92,7 +92,7 @@ function App() {
             )}
           />
           <Route
-            path="/"
+            path="*"
             exact
             render={(routeProps) => (
               <Shop
