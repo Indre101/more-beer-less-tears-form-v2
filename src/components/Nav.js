@@ -19,7 +19,7 @@ function Nav(props) {
   return (
     <nav>
       <ul className="nav-links">
-        <Link to="*">
+        <Link to="/">
           <li>Shop</li>
         </Link>
         <Link to="/cart">

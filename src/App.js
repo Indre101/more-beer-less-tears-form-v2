@@ -7,6 +7,7 @@ import Shop from "./components/Shop";
 import Cart from "./components/Cart";
 import Details from "./components/Details";
 import Product from "./components/Product";
+import OrderControl from "./components/OrderControl";
 import Payment from "./components/Payment";
 import Confirmation from "./components/Confirmation";
 import OrderMessage from "./components/OrderMessage";
@@ -91,7 +92,7 @@ function App() {
             )}
           />
           <Route
-            path="*"
+            path="/"
             exact
             render={(routeProps) => (
               <Shop

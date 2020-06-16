@@ -52,5 +52,5 @@ export default function OrderControl(props) {
       }
     });
   }
-  return <div>{props.render(setbeerCount, beerCount, createOrder)}</div>;
+  return <div>{props.render(setbeerCount, beerCount, createOrder, beer)}</div>;
 }

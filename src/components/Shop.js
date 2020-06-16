@@ -65,7 +65,7 @@ function Shop(props) {
       setorder={props.setorder}
       orders={props.orders}
       preloaderPlayed={props.preloaderPlayed}
-      render={(setbeerCount, beerCount, createOrder) => (
+      render={(setbeerCount, beerCount, createOrder, beer) => (
         <BeerCardShop
           {...props}
           setbeerCount={setbeerCount}
