@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "../App.scss";
 import gsap from "gsap";
+import { Link } from "react-router-dom";
 
 function Header() {
   useEffect(() => {
@@ -9,13 +10,15 @@ function Header() {
   return (
     <div className="site-header">
       <div className="header-background animFoam">
-        <div className="logo-container">
-          <img
-            className="foobar-logo"
-            src={require("../../src/assets/svg/foobar_logo.svg")}
-            alt="Foobar logo"
-          />
-        </div>
+        <Link to="/">
+          <div className="logo-container">
+            <img
+              className="foobar-logo"
+              src={require("../../src/assets/svg/foobar_logo.svg")}
+              alt="Foobar logo"
+            />
+          </div>
+        </Link>
       </div>
       <div className="cloud-top animFoam">
         <img
