@@ -4,6 +4,7 @@ import TopBeer from "./TopBeer";
 import "../App.scss";
 import BeerCardShop from "./BeerCardShop";
 import gsap from "gsap";
+import OrderControl from "./OrderControl";
 
 function Shop(props) {
   useEffect(() => {
@@ -58,13 +59,21 @@ function Shop(props) {
   }, [beers, beersOnTap]);
 
   const beersAvailableTobuyElement = beersAvailableTobuy.map((beer) => (
-    <BeerCardShop
+    <OrderControl
       key={beer.id}
       beer={beer}
       setorder={props.setorder}
       orders={props.orders}
       preloaderPlayed={props.preloaderPlayed}
-    />
+      render={(setbeerCount, beerCount, createOrder) => (
+        <BeerCardShop
+          {...props}
+          setbeerCount={setbeerCount}
+          beer={beer}
+          beerCount={beerCount}
+          createOrder={createOrder}
+        />
+      )}></OrderControl>
   ));
 
   return (

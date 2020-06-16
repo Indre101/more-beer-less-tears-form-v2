@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import DataBase from "../modules/DataBase";
 import { Link } from "react-router-dom";
 import { Button } from "./Buttons";
@@ -6,12 +6,16 @@ import gsap from "gsap";
 
 export default function Confirmation(props) {
   const { orders, user, paymentMethod, totalAmount } = props.location.state;
-
+  const [filteredOrderes, setfilteredOrderes] = useState([]);
   useEffect(() => {
     gsap.from(".orderAnim", { duration: 1, y: 50, opacity: 0, stagger: 0.2 });
   }, []);
 
-  const orderSummary = orders.map((order) => (
+  useEffect(() => {
+    setfilteredOrderes(orders.filter((order) => order.amount !== 0));
+  }, [orders]);
+
+  const orderSummary = filteredOrderes.map((order) => (
     <div className="order-summary" key={Math.random() * 4000}>
       <h4>
         {order.amount} x {order.name}
@@ -21,7 +25,7 @@ export default function Confirmation(props) {
   ));
 
   async function placeOrder() {
-    const ordersTopost = orders.map((order) => ({
+    const ordersTopost = filteredOrderes.map((order) => ({
       name: order.name,
       amount: order.amount,
     }));

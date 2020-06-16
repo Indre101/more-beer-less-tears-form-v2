@@ -1,18 +1,17 @@
 import React, { useState } from "react";
 
 export default function OrderControl(props) {
-  const { name } = props.beer;
-  const { orders, setorder } = props.props;
+  const { orders, setorder, beer } = props;
   const [beerCount, setbeerCount] = useState(1);
 
   function getorderedBeeramount() {
     let amount;
     if (
       orders.length > 0 &&
-      orders.filter((order) => order.name === name).length > 0
+      orders.filter((order) => order.name === beer.name).length > 0
     ) {
       amount = orders
-        .filter((order) => order.name === name)
+        .filter((order) => order.name === beer.name)
         .map((order) => order.amount)
         .flat();
       return amount[0];
@@ -53,7 +52,5 @@ export default function OrderControl(props) {
       }
     });
   }
-  return (
-    <div>{props.render(beerCount, setbeerCount, createOrder, props.beer)}</div>
-  );
+  return <div>{props.render(setbeerCount, beerCount, createOrder)}</div>;
 }
