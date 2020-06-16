@@ -16,7 +16,7 @@ export default function Payment(props) {
     return paymentMethod === paymentOption ? "show" : "hide";
   }
   return (
-    <div>
+    <div className="paymentWrapper">
       <h2 className="page-title">Payment method</h2>
       <form className="optionsForPayment">
         <input
@@ -67,8 +67,13 @@ export default function Payment(props) {
         />
       </div>
       <div
-        className="payment-buttons"
-        style={{ display: paymentMethod === "Card payment" ? "none" : "flex" }}>
+        className="payment-buttons NavigationButtons"
+        style={{
+          display:
+            !paymentMethod || paymentMethod === "Card payment"
+              ? "none"
+              : "flex",
+        }}>
         <Link
           to={{
             pathname: `/details`,

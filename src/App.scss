@@ -103,9 +103,10 @@
 
 .totalToPAy {
   margin-top: 2rem;
-  width: 100%;
+  width: 90%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  justify-self: center;
 
   h2 {
     color: var(--text-h2-color);
@@ -114,11 +115,11 @@
 
 .cart {
   a {
-    display: flex;
-    width: 50%;
+    width: 90%;
     margin-top: 2rem;
     justify-self: center;
     margin-bottom: 2rem;
+    justify-content: flex-end;
   }
 }
 

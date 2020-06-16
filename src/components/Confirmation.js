@@ -59,7 +59,7 @@ export default function Confirmation(props) {
         <h2>Total</h2>
         <h3>{totalAmount}Kr</h3>
       </section>
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div className="NavigationButtons">
         <Link
           to={{
             pathname: `/payment`,

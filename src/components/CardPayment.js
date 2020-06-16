@@ -223,7 +223,7 @@ export default function CardPayment(props) {
         />
         <div className="error">Please insert valid CVC</div>
 
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex" }} className="NavigationButtons">
           <Link
             to={{
               pathname: `/details`,

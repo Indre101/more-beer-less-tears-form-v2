@@ -105,7 +105,7 @@ function Details(props) {
           />
 
           <div className="error">Please insert a phone number</div>
-          <div style={{ display: "flex" }}>
+          <div className="NavigationButtons" style={{ display: "flex" }}>
             <Link
               to={{
                 pathname: `/cart`,
