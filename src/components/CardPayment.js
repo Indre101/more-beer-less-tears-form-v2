@@ -153,6 +153,9 @@ export default function CardPayment(props) {
           handleSubmit(event);
         }}
         ref={cardFom}>
+        <label htmlFor="number">
+          <h4>Card number</h4>
+        </label>
         <input
           id="number"
           className="cardNumber cc-number"
@@ -166,7 +169,9 @@ export default function CardPayment(props) {
         />
 
         <div className="error">Please insert a valid Card number</div>
-
+        <label htmlFor="name">
+          <h4>Full Name</h4>
+        </label>
         <input
           id="name"
           type="text"
@@ -181,6 +186,9 @@ export default function CardPayment(props) {
 
         <div className="error">Please insert a name</div>
 
+        <label htmlFor="expiry">
+          <h4>Valid for</h4>
+        </label>
         <input
           id="expiry"
           className="expiry"
@@ -200,7 +208,9 @@ export default function CardPayment(props) {
           onFocus={handleInputFocus}
         />
         <div className="error">Please insert valid date</div>
-
+        <label htmlFor="cvc">
+          <h4>CVC</h4>
+        </label>
         <input
           id="cvc"
           type="tel"

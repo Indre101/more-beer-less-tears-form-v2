@@ -73,7 +73,7 @@ function Details(props) {
           }}
           ref={cardForm}>
           <label>
-            <h2>Name</h2>
+            <h4>Name</h4>
           </label>
           <input
             id="name"
@@ -90,7 +90,7 @@ function Details(props) {
 
           <div className="error">Please insert a name</div>
           <label>
-            <h2>Phone number</h2>
+            <h4>Phone number</h4>
           </label>
           <input
             id="phone"

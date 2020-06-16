@@ -7,10 +7,13 @@
 form {
   width: 500px;
   padding: 2rem;
+  label {
+    justify-content: flex-start;
+    text-align: left;
+    width: 85%;
+  }
 }
-h2 {
-  justify-content: flex-start;
-}
+
 input {
   display: block;
   outline: none;
