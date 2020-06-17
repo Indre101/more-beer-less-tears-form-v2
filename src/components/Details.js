@@ -28,6 +28,11 @@ function Details(props) {
               hideInputErrors(item);
             }
           });
+          // localStorage.setItem("userName", userInfo.name);
+          // localStorage.setItem("phone", userInfo.phone);
+          // localStorage.setItem("userInfo", JSON.stringify(userInfo));
+          // const test = localStorage.getItem("userInfo");
+          // console.log(test);
         }
       });
     } else {
@@ -84,7 +89,12 @@ function Details(props) {
             onChange={handleChange}
             autoComplete="name"
             name="name"
-            value={props.userInfo.name}
+            value={
+              props.userInfo.name
+              //  !== ""
+              //   ? props.userInfo.name
+              //   : localStorage.getItem("userName")
+            }
             required
           />
 
@@ -100,7 +110,12 @@ function Details(props) {
             pattern="^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*.{6,}$"
             onChange={handleChange}
             name="phone"
-            value={props.userInfo.phone}
+            value={
+              props.userInfo.phone
+              //  !== ""
+              //   ? props.userInfo.phone
+              //   : localStorage.getItem("phone")
+            }
             required
           />
 

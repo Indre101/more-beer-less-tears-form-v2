@@ -13,11 +13,11 @@ const OrderMessage = (props) => {
         <h1 className="animMessage">No more tears</h1>
         <h2 className="animMessage">Your order number is</h2>
         <h1 className="order-number animMessage">
-          {props.location.state.orderNumber}
+          {localStorage.getItem("orderId")}
         </h1>
         <Link
           to={{
-            pathname: `/shop`,
+            pathname: `/`,
           }}>
           <Button type="button" buttonStyle="btn--secondary--solid">
             Back to beers

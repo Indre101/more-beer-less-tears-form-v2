@@ -31,11 +31,10 @@ export default function Confirmation(props) {
     }));
     const response = await DataBase.PostOrder(ordersTopost);
     props.setorder([]);
+
+    localStorage.setItem("orderId", response.id && response.id);
     props.history.push({
       pathname: `/orderMessage`,
-      state: {
-        orderNumber: response.id,
-      },
     });
   }
 

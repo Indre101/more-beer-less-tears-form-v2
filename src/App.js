@@ -19,7 +19,6 @@ function App() {
 
   const [userInfo, setuserInfo] = useState({
     name: "",
-    email: "",
     phone: "",
   });
 
