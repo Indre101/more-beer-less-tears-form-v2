@@ -66,6 +66,15 @@ export default function Payment(props) {
           history={props.history}
         />
       </div>
+
+      <div style={{ width: 120, display: !paymentMethod ? "block" : "none" }}>
+        <Button
+          children={"Go back"}
+          type={"button"}
+          buttonStyle={"btn--secondary--solid"}
+        />
+      </div>
+
       <div
         className="payment-buttons NavigationButtons"
         style={{

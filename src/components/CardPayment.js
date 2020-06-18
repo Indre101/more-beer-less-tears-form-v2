@@ -235,14 +235,14 @@ export default function CardPayment(props) {
             <Button
               children={"Go back"}
               type={"button"}
-              buttonStyle={"btn--primary--solid"}
+              buttonStyle={"btn--secondary--solid"}
             />
           </Link>
 
           <Button
             children={"Next"}
             type={"submit"}
-            buttonStyle={"btn--secondary--solid"}
+            buttonStyle={"btn--primary--solid"}
             // onClick={handleSubmit}
           />
         </div>
