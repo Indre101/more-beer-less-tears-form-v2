@@ -171,3 +171,11 @@ label.card {
 [data-show="hide"] {
   display: none;
 }
+
+.paymentBackBtn {
+  width: 85%;
+  margin: 0 auto;
+  a {
+    width: 120px;
+  }
+}

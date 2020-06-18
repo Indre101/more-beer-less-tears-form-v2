@@ -67,12 +67,23 @@ export default function Payment(props) {
         />
       </div>
 
-      <div style={{ width: 120, display: !paymentMethod ? "block" : "none" }}>
-        <Button
-          children={"Go back"}
-          type={"button"}
-          buttonStyle={"btn--secondary--solid"}
-        />
+      <div
+        className="paymentBackBtn"
+        style={{ display: !paymentMethod ? "flex" : "none" }}>
+        <Link
+          to={{
+            pathname: `/details`,
+            state: {
+              orders: orders,
+              user: user,
+            },
+          }}>
+          <Button
+            children={"Go back"}
+            type={"button"}
+            buttonStyle={"btn--secondary--solid"}
+          />
+        </Link>
       </div>
 
       <div

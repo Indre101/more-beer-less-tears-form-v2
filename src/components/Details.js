@@ -63,7 +63,7 @@ function Details(props) {
   }
 
   return (
-    <div className="main-wrapper">
+    <div className="main-wrapper details">
       <>
         <form
           autoComplete="on"
