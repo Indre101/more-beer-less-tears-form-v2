@@ -5,8 +5,6 @@
 @import "sass/partials/abstracts/variables";
 
 form {
-  width: 500px;
-  padding: 2rem;
   label {
     justify-content: flex-start;
     text-align: left;
@@ -14,22 +12,11 @@ form {
   }
 }
 
-input {
-  display: block;
-  outline: none;
-  padding: 1rem;
-  width: 100%;
-  border: var(--border);
-  border-radius: var(--border-radius);
-}
-
-.NavigationButtons {
-  display: flex;
-  width: 90%;
-  justify-content: space-between;
-  margin: 0 auto;
-
-  .btn {
-    width: 120px;
-  }
-}
+// input {
+//   display: block;
+//   outline: none;
+//   padding: 1rem;
+//   width: 100%;
+//   border: var(--border);
+//   border-radius: var(--border-radius);
+// }

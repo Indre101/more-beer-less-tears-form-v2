@@ -3,7 +3,6 @@
 // --------------------------------------------
 form {
   //background: yellow;
-  width: 500px;
   padding: 2rem;
 }
 input {
@@ -40,21 +39,3 @@ input:valid:not(:placeholder-shown):not(:focus) {
     transform: translateX(6px);
   }
 }
-/*
-form {
-	background: yellow;
-	width: 500px;
-	padding: 2rem;
-}
-input {
-	padding: 1rem;
-	width: 100%;
-	border: var(--border);
-	border-radius: var(--border-radius);
-	&:valid {
-		border: 5px solid green;
-	}
-	&:invalid {
-		border: 5px solid red;
-	}
-}*/
