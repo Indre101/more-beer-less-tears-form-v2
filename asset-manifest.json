@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/more-beer-less-tears-form-v2/static/css/main.e3ecf45d.chunk.css",
+    "main.css": "/more-beer-less-tears-form-v2/static/css/main.f44034cf.chunk.css",
     "main.js": "/more-beer-less-tears-form-v2/static/js/main.6ccdddd6.chunk.js",
     "main.js.map": "/more-beer-less-tears-form-v2/static/js/main.6ccdddd6.chunk.js.map",
     "runtime-main.js": "/more-beer-less-tears-form-v2/static/js/runtime-main.260df368.js",
@@ -9,10 +9,10 @@
     "static/js/2.ad4ddada.chunk.js": "/more-beer-less-tears-form-v2/static/js/2.ad4ddada.chunk.js",
     "static/js/2.ad4ddada.chunk.js.map": "/more-beer-less-tears-form-v2/static/js/2.ad4ddada.chunk.js.map",
     "index.html": "/more-beer-less-tears-form-v2/index.html",
-    "precache-manifest.86d76c18fbae21a982c448b13f3c8233.js": "/more-beer-less-tears-form-v2/precache-manifest.86d76c18fbae21a982c448b13f3c8233.js",
+    "precache-manifest.bd9c2b435d639e21a9e0128ffc1b222c.js": "/more-beer-less-tears-form-v2/precache-manifest.bd9c2b435d639e21a9e0128ffc1b222c.js",
     "service-worker.js": "/more-beer-less-tears-form-v2/service-worker.js",
     "static/css/2.5dddc201.chunk.css.map": "/more-beer-less-tears-form-v2/static/css/2.5dddc201.chunk.css.map",
-    "static/css/main.e3ecf45d.chunk.css.map": "/more-beer-less-tears-form-v2/static/css/main.e3ecf45d.chunk.css.map",
+    "static/css/main.f44034cf.chunk.css.map": "/more-beer-less-tears-form-v2/static/css/main.f44034cf.chunk.css.map",
     "static/js/2.ad4ddada.chunk.js.LICENSE.txt": "/more-beer-less-tears-form-v2/static/js/2.ad4ddada.chunk.js.LICENSE.txt",
     "static/media/banner.svg": "/more-beer-less-tears-form-v2/static/media/banner.3aef1aca.svg",
     "static/media/bubble.svg": "/more-beer-less-tears-form-v2/static/media/bubble.ae85458a.svg",
@@ -39,7 +39,7 @@
     "static/js/runtime-main.260df368.js",
     "static/css/2.5dddc201.chunk.css",
     "static/js/2.ad4ddada.chunk.js",
-    "static/css/main.e3ecf45d.chunk.css",
+    "static/css/main.f44034cf.chunk.css",
     "static/js/main.6ccdddd6.chunk.js"
   ]
 }
