@@ -6,7 +6,7 @@ import gsap from "gsap";
 
 export default function Confirmation(props) {
   const { orders, user, paymentMethod, totalAmount } = props.location.state;
-  const [filteredOrderes, setfilteredOrderes] = useState([]);
+  const [filteredOrders, setfilteredOrderes] = useState([]);
   useEffect(() => {
     gsap.from(".orderAnim", { duration: 1, y: 50, opacity: 0, stagger: 0.2 });
   }, []);
@@ -15,7 +15,7 @@ export default function Confirmation(props) {
     setfilteredOrderes(orders.filter((order) => order.amount !== 0));
   }, [orders]);
 
-  const orderSummary = filteredOrderes.map((order) => (
+  const orderSummary = filteredOrders.map((order) => (
     <div className="order-summary" key={Math.random() * 4000}>
       <h4>
         {order.amount} x {order.name}
@@ -25,7 +25,7 @@ export default function Confirmation(props) {
   ));
 
   async function placeOrder() {
-    const ordersTopost = filteredOrderes.map((order) => ({
+    const ordersTopost = filteredOrders.map((order) => ({
       name: order.name,
       amount: order.amount,
     }));
